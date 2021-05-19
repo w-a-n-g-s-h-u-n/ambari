@@ -33,4 +33,4 @@ jobs:
     - name: Setting the Version
       run: mvn versions:set-property -Dproperty=revision -DnewVersion=2.7.5.0.0
     - name: Build with Maven
-      run: mvn -B clean install package rpm:rpm -DskipTests -Dpython.ver="python >= 2.6" -Preplaceurl
+      run: mvn -B clean install package rpm:rpm -DskipTests -Drat.skip=true -Dpython.ver="python >= 2.6" -Preplaceurl
